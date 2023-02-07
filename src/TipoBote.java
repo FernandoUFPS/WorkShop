@@ -1,4 +1,4 @@
-public class TipoBote {
+public abstract class TipoBote {
 
 
     private double precioBase;
@@ -59,4 +59,6 @@ public class TipoBote {
     }
 
 
+    public abstract String comprar(double precioOfrecido);
 }
+

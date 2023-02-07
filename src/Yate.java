@@ -1,14 +1,14 @@
 public class Yate extends TipoBote {
 
     private int numeroCamarotes;
-    private double precioYate;
+    private double precioVenta;
 
     public Yate (double precioBase, double valorAdicional, int anoFabricacion, int eslora,
                  double numeroCamarote, double precioVenta){
 
         super(precioBase, valorAdicional, anoFabricacion, eslora);
         this.numeroCamarotes=numeroCamarotes;
-        this.precioYate=precioYate;
+        this.precioVenta=precioVenta;
         //tipoYate();
 }
 
@@ -26,13 +26,15 @@ public class Yate extends TipoBote {
             return ("Yate economico");
     }}
 
-    public void comprarYate (double precioOfrecido){
-        if (precioOfrecido>=precioYate){
-            System.out.println("Compra exitosa");
-        } else {
-            System.out.println("compra denegada, ahorre pobre");
-        }
-    }
+
+    @Override
+     public String comprar (double precioOfrecido){
+        if (precioOfrecido>=precioVenta){
+            return  ("Compra exitosa");
+       } else {
+           return ("compra denegada, ahorre pobre");
+       }
+   }
 
 
 

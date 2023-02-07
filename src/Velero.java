@@ -20,7 +20,14 @@ public class Velero extends TipoBote {
             return ("Velero Grande");
         } else
             return ("Velero Pequeño");
-        }}
+        }
+
+    @Override
+    public String comprar(double precioOfrecido) {
+        return null;
+    }
+
+}
 
 
 
